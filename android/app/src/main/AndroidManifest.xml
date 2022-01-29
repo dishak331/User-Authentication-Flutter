@@ -2,8 +2,7 @@
     package="com.example.user_auth">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
    <application
         android:label="user_auth"
         android:icon="@mipmap/ic_launcher">

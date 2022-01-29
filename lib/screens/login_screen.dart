@@ -273,7 +273,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         SizedBox(width: 5.0),
                         GestureDetector(
                           onTap: () {
-                            Navigator.pushNamed(
+                            Navigator.pushReplacementNamed(
                                 context, RegisterScreen.routeName);
                           },
                           child: Text("Register Now",

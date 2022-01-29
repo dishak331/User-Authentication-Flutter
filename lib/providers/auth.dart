@@ -61,7 +61,7 @@ class Auth with ChangeNotifier {
   // }
 
   User fetchUserDetails() {
-    return _userdetails.firstWhere((prod) => prod.userId == _userId);
+    return _userdetails.firstWhere((prod) => prod.userId == userId);
   }
 
   Future<void> addUserDetails(User ud) async {

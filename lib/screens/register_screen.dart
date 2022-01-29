@@ -155,7 +155,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                       size: 17.0,
                                     )),
                                 validator: (value) {
-                                  if (value.isEmpty || !value.contains('@')) {
+                                  if (value.isEmpty) {
                                     return 'Invalid username';
                                   }
                                   return null;
@@ -225,7 +225,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                       },
                                       child: Checkbox(
                                         value: _checked,
-                                        onChanged: null,
+                                        onChanged: (s) {
+                                          setState(() {
+                                            _checked = !_checked;
+                                          });
+                                          return _checked;
+                                        },
+                                        checkColor: Colors.white,
+                                        activeColor: Colors.orange,
                                       ),
                                     ),
                                     Text(
@@ -309,7 +316,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       SizedBox(width: 5.0),
                       GestureDetector(
                         onTap: () {
-                          Navigator.pushNamed(context, LoginScreen.routeName);
+                          Navigator.pushReplacementNamed(
+                              context, LoginScreen.routeName);
                         },
                         child: Text(
                           "Login",
